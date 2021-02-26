@@ -1,5 +1,5 @@
 {% set name = "corsikaio" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.4.post1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,21 +7,21 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0ffbcc6449ec24b340dba5f167c2aa0ce368d764ee611aa8c4c26d525a510b25
+  sha256: f848172d08b925c974420928f945570c8f367cd4b8ff8e1cce45a1b044c4f454
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - numpy
     - pytest-runner
   run:
-    - python
+    - python >=3.6
     - numpy
 
 test:
@@ -33,7 +33,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Reader for corsika binary output files using numpy'
+  summary: Reader for corsika binary output files using numpy
 
   description: |
     Library for reading the CORSIKA binary output files into meaningful
