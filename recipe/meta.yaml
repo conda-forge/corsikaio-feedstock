@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,6 +20,7 @@ requirements:
     - pip
     - numpy
     - pytest-runner
+    - setuptools_scm
   run:
     - python >=3.6
     - numpy
@@ -27,6 +28,8 @@ requirements:
 test:
   imports:
     - corsikaio
+  commands:
+    - python -c 'import corsikaio; print(corsikaio.__version__)' | grep -v 0.0.0
 
 about:
   home: https://github.com/fact-project/pycorsikaio
