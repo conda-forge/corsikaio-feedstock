@@ -28,6 +28,8 @@ requirements:
 test:
   imports:
     - corsikaio
+  commands:
+    - python -c 'import corsikaio; print(corsikaio.__version__)' | grep -v 0.0.0
 
 about:
   home: https://github.com/fact-project/pycorsikaio
