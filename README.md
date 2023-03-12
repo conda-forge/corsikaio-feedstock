@@ -1,11 +1,11 @@
-About corsikaio
-===============
+About corsikaio-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/corsikaio-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/fact-project/pycorsikaio
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/corsikaio-feedstock/blob/main/LICENSE.txt)
 
 Summary: Reader for corsika binary output files using numpy
 
