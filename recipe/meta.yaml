@@ -1,5 +1,5 @@
 {% set name = "corsikaio" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d26a673c28509297ec2b07f13b49b6077c29f2b027b98de8942108b75aa7ac43
+  sha256: 39894dcb8c0cc5136095a07d9aeb520c658d74e59f4f661d81e76dbfda4f0c49
 
 build:
   noarch: python
