@@ -6,26 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 8e1c27d6b5dba18a67a44fdb10f2749b9819b0059f5951292b0b37e9e58186b0
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - numpy
     - pytest-runner
     - setuptools_scm
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - corsikaio
   commands:
